@@ -1,0 +1,33 @@
+.title {
+    background-color: aqua;
+    width: 350px; margin: 50px auto 0;
+    /* flex 속성은 정렬하고자 하는 대상의 바로앞 부모에게 명령시작 */
+    display: flex;
+    /* flex 기본값 메인축(수평)정렬 */
+    /* 메인축 정렬속성 */
+    /* justify-content: flex-start; 다 왼쪽 */
+    /* justify-content: flex-end; 다 오른쪽 */
+    /* justify-content: space-around; 양쪽 끝에두고 여백 */
+    justify-content: space-between; /* 양쪽 끝 */
+    /* text-align: center; 와 차이 -> 인라인만보내기가능 */
+    padding: 0 10px;
+    align-items: center; /* 교차축 정렬 속성(1줄일때) */
+
+}
+.title h1 {font-size: 1.2rem;}
+.title .more {font-size: 0.75rem;}
+.contents {
+    background-color: green;
+    width: 350px; margin:0 auto; height: calc(50px * 3);/* 부모에 기준이 있어야 줄바꿈 가능 */
+    display: flex;
+    /* flex-wrap: nowrap; 줄바꿈 기본값  */
+    flex-flow:column wrap;  /* flex-wrap: wrap; flex-direction: column; ->두 속성묶음속성 */
+    align-content: space-between;/* 교차죽 정렬속성 (2줄이상일때) */
+    justify-content: flex-end;/* 메인축의 아래쪽 */
+    /* gap:10px; flex 전용 여백(item 사이에만 적용) */
+}
+.contents li {
+    width:calc((100% - 15px) / 4); height: 50px; /* 높이는 자식을 키우면 부모가 같이 따라옴 */
+}
+.contents li:nth-child(odd) {background-color: coral;}
+.contents li:nth-child(even) {background-color: darkgoldenrod;}

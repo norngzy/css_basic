@@ -1,0 +1,47 @@
+header {
+    background-color: aqua;
+    width: 320px; height: 150px;
+    margin: 50px auto 0;
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+header > * {
+    border: 1px solid red;
+    width: 50px; height: 50px;
+}
+header h1 {}
+header nav {}
+header nav .gnb {
+    display: flex; flex-flow: row wrap;
+    /* 메인축, 교차축 속성 */
+}
+header nav .gnb li:last-child {
+    display: flex; flex-flow:column nowrap;
+    background-color: pink;
+}
+header nav .gnb li:nth-child(3) {}
+header nav .gnb > li > a {
+    background-color: yellow;
+    width: 50%; /* 부모의 상대적으로%  */
+}/* 정렬대상 */
+header nav .gnb > li > a span {}/* 정렬대상 */
+header nav .gnb > li > a em {}/* 정렬대상 */
+header nav .gnb > li .sub_bg {}
+header nav .gnb > li:first-child .sub_bg {
+    background-color: blueviolet;
+    position:absolute;
+    width: 300%; height: 200px;
+    left: 50%; top: 65px;
+    transform:translateX(-50%);/* 대상정중앙배치 */
+    /* display: flex; flex-flow: column nowrap; align-items: center; */
+    text-align: center;/* inlin-block의 inline특징을 파악해서 가운데로 배치 */
+}
+header nav .gnb > li:first-child .sub_bg ul {
+    background-color: beige;
+    width: 100px; display: inline-block;
+}
+header nav .gnb > li:first-child .sub_bg ul li {}
+header nav .gnb > li:first-child .sub_bg ul li a {}
+main {height: 200vh; background-color: lime;}

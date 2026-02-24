@@ -141,7 +141,7 @@
 * `부모선택자::before {}` -> 부모의 첫번째 자식에 디자인 생성
 ### after, before 사용 시 필수속성
 * `content:'';` -> 내용인식속성, 글자 필요한 디자인이 아닐 경우 ''빈따옴표로 남겨둠
-* `dispaly, background-color, width, height`
+* `display, background-color, width, height`
 ## 계산기 함수 `calc()`
 * +, -, *, /, % 다양한 사칙연산 사용 가능
 * 추가 괄호를 통한 복잡한 계산 가능
@@ -186,3 +186,14 @@
     * flex-start, flex-end, center 위 메인축과 뜻 동일
 * `align-content` : 교차축이 2줄 이상일때
     * flex-start, flex-end, center, space-between, space-around 위 메인축과 뜻 동일, 값 동일
+# 스크롤디자인 CSS
+* **색만 변경해서 사용**
+/* Firefox */
+html {scrollbar-width: 10px;;scrollbar-color: #222 #e73b3b;}
+/* Opera */
+html::-o-scrollbar {width: 10px;}
+html::-o-scrollbar-thumb {background-color: #222;border-radius: 5px;}
+/* Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}
+::-webkit-scrollbar-thumb {background-color: #222;border-radius: 5px;}

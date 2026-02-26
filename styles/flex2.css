@@ -44,4 +44,4 @@ header nav .gnb > li:first-child .sub_bg ul {
 }
 header nav .gnb > li:first-child .sub_bg ul li {}
 header nav .gnb > li:first-child .sub_bg ul li a {}
-main {height: 200vh; background-color: lime;}
+main {height:200vh; background-color:lightgray;}

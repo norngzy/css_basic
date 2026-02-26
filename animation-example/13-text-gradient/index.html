@@ -13,10 +13,13 @@
             margin:0 auto; font-weight:700; 
             font-size:5rem; text-align: center;
             background: linear-gradient(to right, #ff00ff, #00ffff, #ff00ff);
+            /* -webkit- 파이어폭스, 크롬 등 브라우저에서 안전하게 속성을 적용하는 웹브라우저 엔진 명렁어 */
+            /* 글자안에서 그라데이션효과 및 배경이미지를 마스크 씌워서 보여주고 싶을 때 사용하는 속성값 모음 */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             color: transparent;
+            animation: h1 3s linear infinite;
         }
         main h2 {
             font-family: 'Black Ops One';
@@ -27,8 +30,24 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             color: transparent;
+            animation: h2 3s linear infinite;
+        }
+        main h3 {
+            margin:0 auto; font-weight:700; 
+            font-size:5rem; text-align: center;
+            background: linear-gradient(rgb(255, 255, 108),#a1f0f0,rgb(255, 255, 108));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            animation: h3 3s linear infinite;
         }
         p {width:30px;}
+        p:nth-child(1) {animation: h1 3s linear infinite;}
+        p:nth-child(2) {
+            transform: scaleY(1);
+            animation: h3 3s linear infinite;
+        }
         p img {width:100%;}
         p:nth-child(1) img {}
         footer {position:fixed; bottom:50px; right:50px;}
@@ -38,6 +57,18 @@
             0% {}
             100% {}
         }
+        @keyframes h1 {
+            0% {transform: translateY(0);}
+            100% {transform: translateY(30px);}
+        }
+        @keyframes h2 {
+            0% {transform: scale(1);}
+            100% {transform: scale(1.2);}
+        }
+        @keyframes h3 {
+            0% {transform: translateY(0);}
+            100% {transform: translateY(-30px);}
+        }
     </style>
 </head>
 <body>
@@ -45,6 +76,7 @@
         <p><img src="./images/arrow.png" alt=""></p>
         <h1>PORTFOLIO</h1>
         <h2>PROJECT</h2>
+        <h3>웹접근성 & 웹표준</h3>
         <p><img src="./images/arrow.png" alt=""></p>
     </main>
     <footer>

@@ -1,0 +1,20 @@
+@keyframes rotate360 {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+@keyframes car {
+    0% {transform: translateX(500px); opacity: 0;}
+    100% {transform: translateX(0); opacity: 1;}
+}
+@keyframes bg {
+    0% {background-position-x: 0;}
+    100% {background-position-x: 1000px;}
+}
+/* position:; 요소 움직임 */
+/* background-position:; 요소는 고정, 요소안배경이미지 이동 */
+/* background-position:x y; 순서*/
+/* background-position-x:; x값만*/
+@keyframes scroll {
+    0% {transform:translateY(0);}
+    100% {transform:translateY(10px);} /* 올리고싶으면 양수 내리고싶으면 음수 */
+}

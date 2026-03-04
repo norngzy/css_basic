@@ -1,0 +1,52 @@
+/* mobile -> PC 점점크게 */
+#wrap {
+    padding: 0 15px;
+    min-width: 320px;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: lightgray;
+}
+#wrap > *  {
+    border:1px solid #000;
+}
+#wrap header {
+    height: 60px; 
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#wrap header h1 {}
+#wrap header nav {}
+#wrap main {}
+#wrap main section {
+    height: 400px; /* 자식에 너비를 주면 부모 따라감! */
+    text-align: center;
+    line-height: 400px;
+    background: linear-gradient(40deg, yellowgreen, white,yellowgreen);
+    /* display:flex; flex-flow:column nowrap;
+    justify-content:center; align-items:center; */
+}
+#wrap main section:nth-child(1) {}
+#wrap main section:nth-child(2) {}
+#wrap footer {
+    height: 100px; 
+    line-height: 100px; /* 요소가 한줄일때만 수직중앙으로 보낼 수 있음/ 두 줄일때는 한줄 한줄 따로 적용됨 */
+    text-align: center;
+    /* display:flex; flex-flow:row nowrap;
+    justify-content:center; align-items:center; */
+}
+/* 반응형웹규칙시작 */
+@media screen and (min-width:480px) {/* 480이상일때 */
+    #wrap {
+        padding: 0 30px;
+        width: 481px;
+    }
+    #wrap main {display: flex; flex-flow: row nowrap;}
+    #wrap main section {width: 50%}
+}/* 480~819 */
+@media screen and (min-width:820px) {
+    #wrap header { 
+    flex-flow:column nowrap;
+    justify-content: center;
+    } 
+}/* 820~1440 */

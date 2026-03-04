@@ -109,6 +109,9 @@
 * reset에 한 번 연결해두면 모든 html에서 사용 가능
 `@font-face {font-family}:'사용할글꼴명'}` (예)컴퓨터글꼴설치
 `선택자 {font-family}:'웹글꼴로 불러온 글꼴명'}` (예)포토샵글꼴사용
+### pretendare 웹글꼴 -복사해서 사용
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+
 ## CSS 레이아웃 정렬 속성
 ### display
 * `display:block` : 인라인을 수직으로 나열 
@@ -186,7 +189,7 @@
     * flex-start, flex-end, center 위 메인축과 뜻 동일
 * `align-content` : 교차축이 2줄 이상일때
     * flex-start, flex-end, center, space-between, space-around 위 메인축과 뜻 동일, 값 동일
-## 스크롤디자인 CSS
+## 스크롤디자인 CSS 태그안에넣지말고 복사-붙여넣기
 * **색만 변경해서 사용**
 /* Firefox */
 html {scrollbar-width: 10px;;scrollbar-color: #222 #e73b3b;}
